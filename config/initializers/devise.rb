@@ -16,7 +16,7 @@ class TurboFailureApp < Devise::FailureApp
  end
 end
 
-class TurboController < ApplicationController
+class DeviseTurboController < ApplicationController
   class Responder < ActionController::Responder
     def to_turbo_stream
       controller.render(options.merge(formats: :html))
