@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   get 'home/index'
   resources :lists
   #root "articles#index"
-  #root "lists#index"
-  root "home#index"
+  root "lists#index"
+  #root "home#index"
 end
