@@ -1,0 +1,29 @@
+<div class="mx-auto md:w-2/3 w-full flex">
+  <div class="mx-auto">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+
+    <div id="navbar" class="1collapse">
+      <h3><%= @post.title %></h3>
+      <h6><%= @post.publish %></h6>
+      <hr />
+      <ul class="nav navbar-nav">
+        <li class="">
+          <p style="width:400px; heigh:200px">
+            <%= @post.body %>
+          </p>
+        </li>
+      </ul>
+    </div>
+    <hr />
+
+    <%= link_to 'Edit this post', edit_post_path(@post), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <div class="inline-block ml-2">
+      <%= button_to 'Destroy this post', post_path(@post), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+    </div>
+    <br />
+    <%= link_to 'Back to posts', posts_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <br />
+  </div>
+</div>
